@@ -1,4 +1,4 @@
-#include<iostream> 
+//#include<iostream> 
 //#include <cstring>
 //int main(void)
 //{
@@ -23,7 +23,7 @@
 //
 //    std::cout << "The longest is: " << arr;
 //}
-#include <iostream>
+//#include <iostream>
 //#include <cstring>
 //int compare(const void* e1, const void* e2)
 //{
@@ -52,3 +52,79 @@
 //    arr[j+1] = '\0';
 //    std::cout << arr;
 //}
+//#include <iostream>
+//#include <cstring>
+//int main(void)
+//{
+//    int a = 0;
+//    char ch;
+//    char arr1[500001];
+//    char arr2[500001];
+//    while ((ch = getchar()) != '\n')
+//    {
+//        arr1[a++] = ch;
+//    }
+//    arr1[a] = '\0';
+//    int len = strlen(arr1);
+//    int i = 0;
+//    int dest = len - 1;
+//    while (dest >= 0)
+//    {
+//        if (arr1[dest] == ' ' && arr1[dest + 1] != ' ' && arr1[dest + 1] != '\0' || (dest == 0 && arr1[0] != ' '))
+//        {
+//            if (i != 0)
+//                arr2[i++] = ' ';
+//            int last = dest + 1;
+//            if (dest == 0 && arr1[0] != ' ')
+//            {
+//                last = dest;
+//            }
+//            while (arr1[last] != ' ' && arr1[last] != '\0')
+//            {
+//                arr2[i++] = arr1[last++];
+//            }
+//        }
+//        dest--;
+//    }
+//    arr2[i] = '\0';
+//    std::cout << arr2 << std::endl;
+//    return 0;
+//}
+#include <iostream>
+#include <cstring>
+int main(void)
+{
+    int a = 0;
+    char ch;
+    char arr1[500001];
+    char arr2[500001];
+    while ((ch = getchar()) != '\n')
+    {
+        arr1[a++] = ch;
+    }
+    arr1[a] = '\0';
+    int len = strlen(arr1);
+    int i = 0;
+    int dest = len - 1;
+    while (dest >= 0)
+    {
+        if (arr1[dest] == ' ' && arr1[dest + 1] != ' ' && arr1[dest + 1] != '\0' || (dest == 0 && arr1[0] != ' '))
+        {
+            if (i != 0)
+                arr2[i++] = ' ';
+            int last = dest + 1;
+            if (dest == 0 && arr1[0] != ' ')
+            {
+                last = dest;
+            }
+            while (arr1[last] != ' ' && arr1[last] != '\0')
+            {
+                arr2[i++] = arr1[last++];
+            }
+        }
+        dest--;
+    }
+    arr2[i] = '\0';
+    std::cout << arr2 << std::endl;
+    return 0;
+}
